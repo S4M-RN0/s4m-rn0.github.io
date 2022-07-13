@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Ficha</title>
+</head>
+<body>
+    <nav>
+        <div class="tabs">
+            <button class="tabBtn" onclick="altTab(event, 'tabCarac')" id="default">Características</button>
+            <button class="tabBtn" onclick="altTab(event, 'tabAtk')">Ataques</button>
+            <button class="tabBtn" onclick="altTab(event, 'tabIten')">Itens</button>
+            <button class="tabBtn" onclick="altTab(event, 'tabMag')">Magias</button>
+            <button class="tabBtn" onclick="altTab(event, 'tabTal')">Talentos</button>
+            <button class="tabBtn" onclick="altTab(event, 'tabUpg')">Upgrades</button>
+        </div>
+    </nav>
+    <br>
+    <!--Phillip 1366x768-->
+    <!--Caio SS 412x892 VP 412x757 -->
+    <main>
+        <div id="tabCarac" class="tabCont">
+            <div class="container">
+                <h1>Características</h1>
+                <div class="row">
+                    <div class="col">
+                        <h2>Raça</h2>
+                        <input type="text" placeholder="Raça">
+                        <h2>Atributos</h2>
+                        <label>FOR</label>
+                        <input class="iptAt" type="text" placeholder="0">
+                        <br>
+                        <label>DES</label>
+                        <input class="iptAt" type="text" placeholder="0">
+                        <br>
+                        <label>VIT</label>
+                        <input class="iptAt" type="text" placeholder="0">
+                        <br>
+                        <label>CON</label>
+                        <input class="iptAt" type="text" placeholder="0">
+                        <br>
+                        <label>INT</label>
+                        <input class="iptAt" type="text" placeholder="0">
+                        <br>
+                        <label>FÉ</label>
+                        <input class="iptAt" type="text" placeholder="0">
+                        <br>
+                    </div>
+                    <div class="col"> 
+                        <h2>Classe</h2>
+                        <input type="text" placeholder="Classe">
+                        <h2>Pontos de Vida</h2>
+                        <input type="text" placeholder="0">
+                        <input type="text" placeholder="0">
+                        <h2>Pontos de Foco</h2>
+                        <input type="text" placeholder="0">
+                        <input type="text" placeholder="0">
+                        <h2>Deslocamento</h2>
+                        <input type="text" placeholder="0">
+                    </div>
+                    <div class="col">
+                        <h2>Andar</h2>
+                        <input type="text" placeholder="1">
+                        <h2>Ferida Grave</h2>
+                        <input type="checkbox">
+                        <h2>À Beira da Morte</h2>
+                        <input type="checkbox">
+                        <h2>Recuperando da Morte</h2>
+                        <input type="checkbox">
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <h1>Salvaguarda</h1>
+                    <div class="col">
+                        <label>FOR</label>
+                        <input type="checkbox">
+                    </div>
+                    <div class="col">
+                        <label>DES</label>
+                        <input type="checkbox">
+                    </div>
+                    <div class="col">
+                        <label>VIT</label>
+                        <input type="checkbox">
+                    </div>
+                    <div class="col">
+                        <label>CON</label>
+                        <input type="checkbox">
+                    </div>
+                    <div class="col">
+                        <label>INT</label>
+                        <input type="checkbox">
+                    </div>
+                    <div class="col">
+                        <label>FÉ</label>
+                        <input type="checkbox">
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <h1>Proficiências</h1>
+                    <div class="col">
+                        <label>Armas</label>
+                        <input type="textbox">
+                    </div>
+                    <div class="col">
+                        <label>Armaduras</label>
+                        <input type="textbox">
+                    </div>
+                    <div class="col">
+                        <label>Magias</label>
+                        <input type="textbox">
+                    </div>
+                    <div class="col">
+                        <label>Outros</label>
+                        <input type="textbox">
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <h1>Moedas</h1>
+                    <div class="col">
+                        <label>Ouro</label>
+                        <input type="text">
+                    </div>
+                    <div class="col">
+                        <label>Cristais do Infinito</label>
+                        <input type="text">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="tabAtk" class="tabCont">
+            <h1>Bungas</h1>
+        </div>
+        <div id="tabIten" class="tabCont">
+            <h1>Lalau</h1>
+        </div>
+        <div id="tabMag" class="tabCont">
+            <h1>Leleu</h1>
+        </div>
+        <div id="tabTal" class="tabCont">
+            <h1>Lulul</h1>
+        </div>
+        <div id="tabUpg" class="tabCont">
+            <h1>Sarapatel</h1>
+        </div>
+    </main>
+    <script src="tabs.js"></script>
+</body>
+</html>
