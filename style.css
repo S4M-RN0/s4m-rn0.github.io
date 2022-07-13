@@ -3,34 +3,35 @@
     src: url(/Fontes/typeface-beleren-bold-master/Beleren2016-Bold.woff)
 }
 
+.menu {
+    background-color: goldenrod;
+}
+
 /* Navbar */
 .tabs {
     overflow: hidden;
-    border: 1px solid goldenrod;
-    background-color: rgb(77, 77, 77);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
 }
   
 /* Botões da navbar */
-.tabs button {
-    background-color: inherit;
-    float: left;
+.tabs li {
     border: none;
     outline: none;
     cursor: pointer;
     padding: 14px 16px;
-    transition: 0.3s;
-    color: goldenrod;
+    color: rgb(77, 77, 77);
 }
   
 /* Botão ao passar com o cursor */
-.tabs button:hover {
-    background-color: goldenrod;
+.tabs li:hover {
     color: black;
 }
   
 /* Botão ativo */
-.tabs button.active {
-    background-color: goldenrod;
+.tabs li.active {
     color: black;
 }
 
@@ -38,4 +39,23 @@ body {
     background-color: rgb(77, 77, 77);
     color: goldenrod;
     font-family: Beleren;
+}
+
+html, body {
+    margin:0;
+    padding:0;
+}
+
+.btnMobile {
+    display: none;
+}
+
+
+@media(max-width:757px){
+    .btnMobile {
+        display: block;
+    }
+    .tabs{
+        display: none;
+    }
 }
