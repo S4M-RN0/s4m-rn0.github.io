@@ -10,9 +10,9 @@
 </head>
 <body>
     <header>
-        <nav class="menu">
+        <nav id="nav">
             <div class="container">
-                <button class="btnMobile"></button>
+                <button id="btnMobile"><span id="hamburguer"></span></button>
                 <ul class="tabs">
                     <li class="tabBtn" onclick="altTab(event, 'tabCarac')" id="default">Características</li>
                     <li class="tabBtn" onclick="altTab(event, 'tabAtk')">Ataques</li>
@@ -25,12 +25,12 @@
         </nav>
     </header>
     <br>
-    <!--Phillip 1366x768-->
+    <!--Phillip SS 1366x768 VP 1366x657-->
     <!--Caio SS 412x892 VP 412x757 -->
-    <div class="container">
-        <main>
-            <div id="tabCarac" class="tabCont">
-                <div>
+    <div id="main" class="container">
+        <main id="mainContent">
+            <div id="content">
+                <div id="tabCarac" class="tabCont">
                     <h1>Características</h1>
                     <div class="row">
                         <div class="col">
@@ -142,23 +142,23 @@
                             <label>Cristais do Infinito</label>
                             <input type="text">
                         </div>
-                    </div>
+                    </div> 
                 </div>
-            </div>
-            <div id="tabAtk" class="tabCont">
-                <h1>Bungas</h1>
-            </div>
-            <div id="tabIten" class="tabCont">
-                <h1>Lalau</h1>
-            </div>
-            <div id="tabMag" class="tabCont">
-                <h1>Leleu</h1>
-            </div>
-            <div id="tabTal" class="tabCont">
-                <h1>Lulul</h1>
-            </div>
-            <div id="tabUpg" class="tabCont">
-                <h1>Sarapatel</h1>
+                <div id="tabAtk" class="tabCont">
+                    <h1>Bungas</h1>
+                </div>
+                <div id="tabIten" class="tabCont">
+                    <h1>Lalau</h1>
+                </div>
+                <div id="tabMag" class="tabCont">
+                    <h1>Leleu</h1>
+                </div>
+                <div id="tabTal" class="tabCont">
+                    <h1>Lulul</h1>
+                </div>
+                <div id="tabUpg" class="tabCont">
+                    <h1>Sarapatel</h1>
+                </div>
             </div>
         </main>
     </div>

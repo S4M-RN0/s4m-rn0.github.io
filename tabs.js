@@ -18,4 +18,26 @@ function altTab(evt, tabNome) {
     evt.currentTarget.className += " active";
 }
 
+var btnMobile = document.getElementById("btnMobile");
+
+function menuMobile(corMenu) {
+    var nav = document.getElementById("nav");
+    nav.classList.toggle('active');
+    var main = document.getElementById("main");
+    main.classList.toggle('active');
+
+    if (main.classList == 'container active') {
+        main.style.backgroundColor = 'rgba(0,0,0,0.5)';
+        main.style.color = 'rgba(218, 165, 32, 0.5)';
+    }
+    else {
+        main.style.backgroundColor = 'rgb(77,77,77)';
+        main.style.color = 'rgba(218, 165, 32)';
+    }
+    
+    return corMenu;
+}
+
+btnMobile.addEventListener('click', menuMobile);
+
 document.getElementById("default").click();

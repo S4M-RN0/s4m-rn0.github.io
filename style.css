@@ -3,13 +3,12 @@
     src: url(/Fontes/typeface-beleren-bold-master/Beleren2016-Bold.woff)
 }
 
-.menu {
+#nav {
     background-color: goldenrod;
 }
 
 /* Navbar */
 .tabs {
-    overflow: hidden;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -18,10 +17,8 @@
   
 /* Botões da navbar */
 .tabs li {
-    border: none;
-    outline: none;
     cursor: pointer;
-    padding: 14px 16px;
+    padding: 14px 16px 14px 0px;
     color: rgb(77, 77, 77);
 }
   
@@ -39,23 +36,84 @@ body {
     background-color: rgb(77, 77, 77);
     color: goldenrod;
     font-family: Beleren;
+    padding: none;
+    margin: none;
 }
 
-html, body {
-    margin:0;
-    padding:0;
-}
-
-.btnMobile {
+#btnMobile, #btnCheck {
     display: none;
 }
 
-
 @media(max-width:757px){
-    .btnMobile {
-        display: block;
+    #nav {
+        overflow: hidden;
+        margin: 0;
+        top: 0;
+        width: 100%;
+        height: 6%;
+        position: fixed;
+        border-bottom: 2px solid black;
     }
-    .tabs{
-        display: none;
+
+    #btnMobile {
+        display: flex;
+        float: right;
+        border: none;
+        outline: none;
+        padding: 3% 1%;
+        color: black;
+        background: none;
+    }
+
+    #hamburguer {
+        border-top: 3px solid;
+        width: 20px;
+    }
+    #hamburguer::after, #hamburguer::before {
+        content: '';
+        display: flex;
+        border-top: 3px solid;
+        width: 20px;
+        height: 2px;
+        margin-top: 5px;
+    }
+
+    .tabs {
+        display: block;
+        position: absolute;
+        background-color: goldenrod;
+        top: 45px;
+        left: 35%;
+        height: 0vh;
+        width: 65%;
+        visibility: hidden;
+        overflow: hidden;
+        transition: .6s;
+        border-left: 2px solid black;
+    }
+
+    .tabs li {
+        margin: 0 1rem;
+        padding: 1rem 0;
+        border-bottom: 2px solid black;
+        font-size: larger;
+    }
+
+    #nav.active .tabs {
+        display: block;
+        height: 100%;
+        visibility: visible;
+        position: fixed;
+    }
+
+    #content {
+        padding-top: 10%;
+    }
+
+    #main.active #mainContent {
+        pointer-events: none;
+    }
+    #main.active #mainContent input {
+        background-color: rgba(200, 200, 200);
     }
 }
