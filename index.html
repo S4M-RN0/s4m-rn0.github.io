@@ -16,138 +16,146 @@
                 <ul class="tabs">
                     <li class="tabBtn" onclick="altTab(event, 'tabCarac')" id="default">Características</li>
                     <li class="tabBtn" onclick="altTab(event, 'tabAtk')">Ataques</li>
-                    <li class="tabBtn" onclick="altTab(event, 'tabIten')">Itens</li>
+                    <li class="tabBtn" onclick="altTab(event, 'tabInv')">Inventário</li>
                     <li class="tabBtn" onclick="altTab(event, 'tabMag')">Magias</li>
                     <li class="tabBtn" onclick="altTab(event, 'tabTal')">Talentos</li>
-                    <li class="tabBtn" onclick="altTab(event, 'tabUpg')">Upgrades</li>
+                    <li class="tabBtn" onclick="altTab(event, 'tabGuild')">Guilda</li>
+                    <select id="chars" onchange="selecChar();" name="Personagens">
+                        <option id="char1">Personagem 1</option>
+                        <option id="char2">Personagem 2</option>
+                        <option id="char3">Personagem 3</option>
+                    </select>
                 </ul>
             </div>
         </nav>
     </header>
     <br>
     <!--Phillip SS 1366x768 VP 1366x657-->
-    <!--Caio SS 412x892 VP 412x757 -->
     <div id="main" class="container">
         <main id="mainContent">
             <div id="content">
                 <div id="tabCarac" class="tabCont">
                     <h1>Características</h1>
                     <div class="row">
-                        <div class="col">
-                            <h2>Raça</h2>
-                            <input type="text" placeholder="Raça">
-                            <h2>Atributos</h2>
-                            <label>FOR</label>
-                            <input class="iptAt" type="text" placeholder="0">
+                        <div class="col-12 col-lg-4" id="mobr1c1">
+                            <div>
+                                <h2>Nome</h2>
+                                <input id="charNome" onchange="salvaChar(0, this);" class="iptNRC" type="text" placeholder="Nome">
+                            </div>
                             <br>
-                            <label>DES</label>
-                            <input class="iptAt" type="text" placeholder="0">
-                            <br>
-                            <label>VIT</label>
-                            <input class="iptAt" type="text" placeholder="0">
-                            <br>
-                            <label>CON</label>
-                            <input class="iptAt" type="text" placeholder="0">
-                            <br>
-                            <label>INT</label>
-                            <input class="iptAt" type="text" placeholder="0">
-                            <br>
-                            <label>FÉ</label>
-                            <input class="iptAt" type="text" placeholder="0">
+                            <div>
+                                <h2>Atributos</h2>
+                                <div class="atb1">
+                                    <label>FOR</label>
+                                    <input id="charFOR" onchange="salvaChar(1, this);" class="iptAt" type="number" placeholder="0">
+                                    <br>
+                                    <label>DES</label>
+                                    <input id="charDES" onchange="salvaChar(2, this);" class="iptAt" type="number" placeholder="0">
+                                    <br>
+                                    <label>VIT</label>
+                                    <input id="charVIT" onchange="salvaChar(3, this);" class="iptAt" type="number" placeholder="0">
+                                    <br>
+                                </div>
+                                <div class="atb2">
+                                    <label>CON</label>
+                                    <input id="charCON" onchange="salvaChar(4, this);" class="iptAt" type="number" placeholder="0">
+                                    <br>
+                                    <label>INT</label>
+                                    <input id="charINT" onchange="salvaChar(5, this);" class="iptAt" type="number" placeholder="0">
+                                    <br>
+                                    <label>FÉ</label>
+                                    <input id="charFE" onchange="salvaChar(6, this);" class="iptAt" type="number" placeholder="0">
+                                </div>
+                            </div>
                             <br>
                         </div>
-                        <div class="col"> 
-                            <h2>Classe</h2>
-                            <input type="text" placeholder="Classe">
-                            <h2>Pontos de Vida</h2>
-                            <input type="text" placeholder="0">
-                            <input type="text" placeholder="0">
-                            <h2>Pontos de Foco</h2>
-                            <input type="text" placeholder="0">
-                            <input type="text" placeholder="0">
-                            <h2>Deslocamento</h2>
-                            <input type="text" placeholder="0">
+                        <div class="col-12 col-lg-4" id="mobr1c2">
+                            <div>
+                                <h2>Classe</h2>
+                                <input id="charClass" onchange="salvaChar(7, this);" class="iptNRC" type="text" placeholder="Classe">
+                            </div>
+                            <br>
+                            <div>
+                                <h2>PV</h2>
+                                <input id="charPVA" onchange="salvaChar(8, this);" type="number" placeholder="Atual">
+                                <input id="charPVT" onchange="salvaChar(9, this);" type="number" placeholder="Total">
+                            </div>
+                            <br>
+                            <div>
+                                <h2>PM</h2>
+                                <input id="charPMA" onchange="salvaChar(10, this);" type="number" placeholder="Atual">
+                                <input id="charPMT" onchange="salvaChar(11, this);" type="number" placeholder="Total">
+                            </div>
                         </div>
-                        <div class="col">
-                            <h2>Andar</h2>
-                            <input type="text" placeholder="1">
-                            <h2>Ferida Grave</h2>
-                            <input type="checkbox">
-                            <h2>À Beira da Morte</h2>
-                            <input type="checkbox">
-                            <h2>Recuperando da Morte</h2>
-                            <input type="checkbox">
+                        <div class="col-12 col-lg-4" id="mobr1c3">
+                            <div>
+                                <h2>Raça</h2>
+                                <input id="charRace" onchange="salvaChar(12, this);" class="iptNRC" type="text" placeholder="Raça">
+                            </div>
+                            <br>
+                            <div>
+                                <h2>Andar</h2>
+                                <input id="charFloor" onchange="salvaChar(13, this);" type="number" placeholder="1">
+                            </div>
+                            <br>
+                            <div>
+                                <h2>BP</h2>
+                                <input id="charPB" onchange="salvaChar(14, this);" type="text" placeholder="2">
+                            </div>
+                            <br>
+                            <div>
+                                <h2>Deslocamento</h2>
+                                <input id="charSpeed" onchange="salvaChar(15, this);" type="number" placeholder="0">
+                            </div>
                         </div>
                     </div>
                     <br>
+                    <br>
                     <div class="row">
-                        <h1>Salvaguarda</h1>
-                        <div class="col">
-                            <label>FOR</label>
-                            <input type="checkbox">
+                        <h1>Feridas e Efeitos de Status</h1>
+                        <div class="col-lg-6">
+                            <h2>Feridas</h2>
+                            <textarea id="charFer" onchange="salvaChar(16, this);" class="FeS"></textarea>
                         </div>
-                        <div class="col">
-                            <label>DES</label>
-                            <input type="checkbox">
-                        </div>
-                        <div class="col">
-                            <label>VIT</label>
-                            <input type="checkbox">
-                        </div>
-                        <div class="col">
-                            <label>CON</label>
-                            <input type="checkbox">
-                        </div>
-                        <div class="col">
-                            <label>INT</label>
-                            <input type="checkbox">
-                        </div>
-                        <div class="col">
-                            <label>FÉ</label>
-                            <input type="checkbox">
+                        <div class="col-lg-6">
+                            <h2>Efeitos de Status</h2>
+                            <textarea id="charESt" onchange="salvaChar(17, this)" class="FeS"></textarea>
                         </div>
                     </div>
+                    <br>
                     <br>
                     <div class="row">
                         <h1>Proficiências</h1>
-                        <div class="col">
-                            <label>Bônus</label>
-                            <input type="text">
+                        <div class="col-lg-6">
+                            <div>
+                                <h2>Armas</h2>
+                                <textarea id="charPWp" onchange="salvaChar(18, this);"></textarea>
+                            </div>
+                            <br>
+                            <div>
+                                <h2>Magias</h2>
+                                <textarea id="charPSp" onchange="salvaChar(19, this);"></textarea>
+                            </div>
+                            <br>                       
                         </div>
-                        <div class="col">
-                            <label>Armas</label>
-                            <input type="textbox">
-                        </div>
-                        <div class="col">
-                            <label>Armaduras</label>
-                            <input type="textbox">
-                        </div>
-                        <div class="col">
-                            <label>Magias</label>
-                            <input type="textbox">
-                        </div>
-                        <div class="col">
-                            <label>Outros</label>
-                            <input type="textbox">
+                        <div class="col-lg-6">
+                            <div>
+                                <h2>Armaduras</h2>
+                                <textarea id="charPAr" onchange="salvaChar(20, this);"></textarea>
+                            </div>
+                            <br>
+                            <div>
+                                <h2>Outros</h2>
+                                <textarea id="charPOt" onchange="salvaChar(21, this);"></textarea>
+                            </div>
                         </div>
                     </div>
-                    <br>
-                    <div class="row">
-                        <h1>Moedas</h1>
-                        <div class="col">
-                            <label>Ouro</label>
-                            <input type="text">
-                        </div>
-                        <div class="col">
-                            <label>Cristais do Infinito</label>
-                            <input type="text">
-                        </div>
-                    </div> 
+                    
                 </div>
                 <div id="tabAtk" class="tabCont">
                     <h1>Bungas</h1>
                 </div>
-                <div id="tabIten" class="tabCont">
+                <div id="tabInv" class="tabCont">
                     <h1>Lalau</h1>
                 </div>
                 <div id="tabMag" class="tabCont">
@@ -156,12 +164,13 @@
                 <div id="tabTal" class="tabCont">
                     <h1>Lulul</h1>
                 </div>
-                <div id="tabUpg" class="tabCont">
+                <div id="tabGuild" class="tabCont">
                     <h1>Sarapatel</h1>
                 </div>
             </div>
         </main>
     </div>
     <script src="tabs.js"></script>
+    <script src="char.js"></script>
 </body>
 </html>

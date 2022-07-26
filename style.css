@@ -23,8 +23,13 @@
 }
   
 /* Botão ao passar com o cursor */
-.tabs li:hover {
+.tabs li:hover, select:hover {
     color: black;
+}
+
+::selection{
+    color: black;
+    background-color: goldenrod;
 }
   
 /* Botão ativo */
@@ -40,11 +45,58 @@ body {
     margin: none;
 }
 
+select, option {
+    background-color: goldenrod;
+    color: rgb(77, 77, 77);
+    font-family: Beleren;
+    outline: none;
+    font-size: medium;
+    border-style: none;
+    appearance: none;
+}
+
+input {
+    width: 50px;
+    height: 30px;
+    font-family: Beleren;
+    font-size: medium;
+    text-align: center;
+}
+
+input.iptNRC {
+    width: 150px;
+    height: 30px;
+    text-align: start;
+}
+
+label {
+    display: inline-block;
+    width: 140px;
+}
+
+input::-webkit-inner-spin-button {
+    appearance: none;
+}
+
+textarea {
+    display: block;
+    font-family: Beleren;
+    font-size: medium;
+    width: 80%;
+    height: 100px;
+} 
+
+textarea.FeS {
+    width: 80%;
+    height:60%;
+    margin-bottom: 20%;
+} 
+
 #btnMobile, #btnCheck {
     display: none;
 }
 
-@media(max-width:757px){
+@media(max-width:412px){
     #nav {
         overflow: hidden;
         margin: 0;
@@ -99,6 +151,19 @@ body {
         font-size: larger;
     }
 
+    .tabs select {
+        margin: 0 1rem;
+        padding: 1rem 0;
+        border-bottom: 2px solid black;
+        width: 235px;
+        font-size: larger;
+
+    }
+    .tabs option {
+        font-size: large;
+    }
+
+
     #nav.active .tabs {
         display: block;
         height: 100%;
@@ -115,5 +180,36 @@ body {
     }
     #main.active #mainContent input {
         background-color: rgba(200, 200, 200);
+    }
+
+    .atb1, .atb2 {
+        display: inline-flex;
+        gap: 5%;   
+    }
+    .atb1 label{
+        width: 40px;
+    }
+    .atb2 label{
+        width: 11px;
+    }
+    .atb2 input {
+        margin-left: 20px;
+    }
+    .atb2 input#charINT {
+        margin-left: 20.25px;
+    }
+    .atb2 input#charFE {
+        margin-left: 18.5px;
+    }
+
+    #mobr1c2 {
+        gap: 5%;
+    }
+
+    textarea, textarea.FeS {
+        width: 100%;
+    }
+    textarea#charPOt {
+        margin-bottom: 25px;
     }
 }

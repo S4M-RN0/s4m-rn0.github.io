@@ -7,35 +7,33 @@ function altTab(evt, tabNome) {
         tabCont[i].style.display = "none";
     }
 
-    // Get all elements with class="tablinks" and remove the class "active"
+    // Pega todos elementos com a class="tablinks" e remove a class "active"
     tabBtn = document.getElementsByClassName("tabBtn");
     for (i = 0; i < tabBtn.length; i++) {
         tabBtn[i].className = tabBtn[i].className.replace(" active", "");
     }
 
-    // Show the current tab, and add an "active" class to the button that opened the tab
+    // Mostra a aba atual
     document.getElementById(tabNome).style.display = "block";
     evt.currentTarget.className += " active";
 }
 
 var btnMobile = document.getElementById("btnMobile");
 
-function menuMobile(corMenu) {
+function menuMobile() {
     var nav = document.getElementById("nav");
-    nav.classList.toggle('active');
+    nav.classList.toggle("active");
     var main = document.getElementById("main");
-    main.classList.toggle('active');
+    main.classList.toggle("active");
 
-    if (main.classList == 'container active') {
-        main.style.backgroundColor = 'rgba(0,0,0,0.5)';
+    if (main.classList == "container active") {
+        main.style.backgroundColor = "rgba(0,0,0,0.5)";
         main.style.color = 'rgba(218, 165, 32, 0.5)';
     }
     else {
-        main.style.backgroundColor = 'rgb(77,77,77)';
-        main.style.color = 'rgba(218, 165, 32)';
+        main.style.backgroundColor = "rgb(77,77,77)";
+        main.style.color = "rgba(218, 165, 32)";
     }
-    
-    return corMenu;
 }
 
 btnMobile.addEventListener('click', menuMobile);
